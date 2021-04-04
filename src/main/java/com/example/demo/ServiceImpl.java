@@ -27,4 +27,17 @@ public class ServiceImpl {
         System.out.println(result);
         return result;
     }
+
+    public String getAllUserNames()
+    {
+        final String uri = "http://localhost:8083/api/users";
+
+        RestTemplate restTemplate = new RestTemplate();
+        String result = restTemplate.getForObject(uri, String.class);
+
+        System.out.println(result);
+        return result;
+    }
+
+
 }

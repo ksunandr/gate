@@ -17,7 +17,7 @@ public class Controller {
 
     @RequestMapping("/")
     public String index() {
-        return "Greetings from Spring Boot!";
+        return "Start empty page";
     }
 
 
@@ -27,4 +27,10 @@ public class Controller {
     public String connect() {
         return serviceImpl.connect();
     }
+
+    @RequestMapping("/allUserNames")
+    public String getAllUserNames(){
+        return serviceImpl.getAllUserNames();
+    }
+
 }
